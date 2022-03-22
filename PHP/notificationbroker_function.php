@@ -2,7 +2,7 @@
 
 function notify($text){
   
-  $url = "https://www.notificationbroker.com/notify/2609d58253be007bbffa871b50df269a/".urlencode($text);
+  $url = "https://www.notificationbroker.com/notify/2609d58253be007bbffa871b50df269a/".rawurlencode($text);
 
   $curl = curl_init($url);
   curl_setopt($curl, CURLOPT_URL, $url);
